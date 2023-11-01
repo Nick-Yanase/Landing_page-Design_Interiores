@@ -160,33 +160,34 @@ body{
 
 /*Events location*/
 
-#location {
-    height: 400px; /*tamanho da imgem no site*/
+.location {
+    height: 500px; /*tamanho da imgem no site*/
     background-image:  linear-gradient( rgba(0,0,0,.8),rgba(0,0,0,.8)), url(img/hrz-1.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     color: var(--text-color);
-    margin-bottom: 3em;
+    margin: 0 0 30px 0;
+    justify-content: space-between;
+    padding: 0 100px;
+ 
 }
 
 #address, #about-location{
-    max-width: 30%;
+    max-width: 100%;
+    width:500px ;
+    
 }
 
-#address{
-    display: flex;
-}
 
 #address i {
     color: var(--primary);
     font-size: 4em; /* os icones podem ser alterados de acordo com padrão de letras*/
-    margin-right: .5em;
+   
 }
 
-#address-details {
+#address {
     text-align: center;
     font-size: 1.3em;
 }
@@ -196,11 +197,14 @@ body{
     font-size: 2.5em;
     margin-bottom: 1em;
     text-transform: uppercase;
+    line-height: 1.2em;
+    
 }
 
 #about-location{
     line-height: 1.5em;
 }
+
 
 /*DETAILS CONTAINER*/
 #details {
@@ -307,7 +311,7 @@ footer p:nth-child(2){
 
 /* Mobile*/
 /*pegamos a dimensão de um mobile Large que é 425px x 920px*/
-@media (max-width:450px){ 
+@media screen and (max-width:450px){ 
 
     /* Formulário do evento */
     #event-description {
@@ -338,26 +342,86 @@ footer p:nth-child(2){
         max-width: 100%;
         margin-bottom: 2em;
     }
-} 
+
 
     /*Localização*/
 
-    #location {
+    .location {
         flex-direction: column;
         align-items:center;
         width:auto;
         padding:2em 0; /* esse "0" é nas laterais*/
     }
 
-    #address {
+    .location #address {
         order: 2;
         flex-direction: column;
         max-width: 100%
     }
-    #address i {
+    .location #address i {
         margin: .3em 0;
     }
-    #about-location {
-        order: 1;
-        max-width: 100%
+    .location #about-location {
+       text-align: center;
+       max-width: 300px;
     }
+
+    #details {
+        max-width: 300px;
+        width: 80%;
+
+    
+    }
+    .detail{
+        display:flex;
+        align-items: center;
+        justify-content:space-between;
+        flex-direction: column;
+        gap: 3%;
+        
+    }
+    
+    .detail img {
+        max-width: 100%;
+        width:700px;
+    
+    }
+
+    .detail-description {
+        width: 100%;
+       
+    }
+
+    #detail-1  h3{
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .detail-description ul{
+        list-style-position: inside; /*Coloca os Ponstos "." da lista dentro da pagina*/
+    }
+    .detail-description ul li{
+       
+    }
+    .detail-description ul li:last-child{
+        font-weight: bold;
+    
+    }
+    
+    #details{
+        font-size:1.2em;
+    }
+    
+    #details .detail-2 {
+        padding: 0 0 30px 0;
+    }
+
+    #details img{
+        padding: 30px 0 0 0;
+    }
+
+
+}
+
